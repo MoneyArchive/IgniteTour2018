@@ -5,7 +5,22 @@
 > Or abc12207/dotnet-samples:aspnetapp
 
 Upload to Azure Container Registry
+1. Login into ACR
+```bash
+az login
 
+az acr login --msignitetour
+```
+
+2. Set image name and tag
+```bash
+docker tag abc12207/dotnet-samples:aspnetapp msignitetour.azurecr.io/dotnet-samples:aspnetapp
+```
+
+3. Push to ACR
+```bash
+docker push msignitetour.azurecr.io/dotnet-samples:aspnetapp
+```
 
 ## b. Demo Multi Container use Docker Compose
 ### 1. Demo wordpress with mysql database (all container)
