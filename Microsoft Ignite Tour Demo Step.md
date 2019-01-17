@@ -65,11 +65,15 @@ docker push msignitetour.azurecr.io/dotnet-samples:aspnetapp
 
 2. Use wordpress-docker-compose-v4.yml
 
-### 4. Demo switch Multi to Single then to Multi, Container still exist
-### 4. Demo switch Multi to Single then to Multi, Container still exist
-
 ### 5. CICD
-Use Azure Repos
-Commit new code
-Trigger build Image and push to Azure Container Registry (CI)
-Azure Container Registry trigger Azre Web App (CD)
+1. Use Azure DevOps -> IgniteTour-Sin
+2. Use VS2019 new aspnetcore mvc project
+3. Commit to the Azure Repos
+4. Set Build Pipeline
+   - Set Trigger
+   - Set Build Task
+   - Set Publish Task
+   - Save & Queue
+5. Set ACR webhook
+6. Commit new code
+  - See how it goes
